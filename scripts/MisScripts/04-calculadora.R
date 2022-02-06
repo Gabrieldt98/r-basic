@@ -104,3 +104,13 @@ rm(product)
 ls()
 rm(list = ls())
 ls()
+
+# Números complejos
+
+z = 2+3i
+z2 = complex(real = 2, imaginary = -3)
+Re(z)
+Im(z)
+Conj(z2)
+
+#lol
