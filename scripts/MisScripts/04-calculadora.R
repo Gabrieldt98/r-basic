@@ -114,3 +114,11 @@ Im(z)
 Conj(z2)
 
 #lol
+
+z = 1+1i
+argZ = Arg(z)
+zC = Conj(z)
+Re(z)
+Im(z)
+
+exp()
