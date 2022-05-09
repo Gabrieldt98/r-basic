@@ -1,0 +1,24 @@
+---
+title: "Carga de DF"
+author: "Gabriel Dávila"
+date: "3/5/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Carga de ficheros local
+
+```{r}
+df = read.table("../../data/bulls.dat",
+                header = FALSE,
+                col.names = c("breed", "sale_price", "shoulder",
+                              "fat_free", "percent_ff", "frame_scale",
+                              "back_fat", "sale_height", "sale_weight"),
+                sep = "", dec = ".")
+head(df)
+```
+

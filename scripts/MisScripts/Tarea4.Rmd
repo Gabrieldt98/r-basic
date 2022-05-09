@@ -1,0 +1,96 @@
+---
+title: "Tarea 4"
+author: "Gabriel Dávila"
+date: "18/4/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Pregunta 1
+
+Realiza los siguientes productos de matrices en `R`:
+
+$A \cdot B$
+
+$B \cdot A$
+
+$(A \cdot B)^T$
+
+$B^T \cdot A$
+
+$(A \cdot B)^{-1}$
+
+$A^{-1} \cdot B^{-1}$
+
+Donde: 
+
+$A = \left [ \begin{matrix} 1 & 2 & 3 & 4 \\ 4 & 3 & 2 & 1 \\ 0 & 1 & 0 & 2 \\ 3 & 0 & 4 & 0 \end{matrix} \right ]$
+
+$B = \left [ \begin{matrix} 4 & 3 & 2 & 1 \\ 0 & 3 & 0 & 4 \\ 1 & 2 & 3 & 4 \\ 0 & 1 & 0 & 2 \end{matrix} \right ]$
+
+```{r Pregunta 1}
+A = rbind(c(1,2,3,4), c(4,3,2,1), c(0,1,0,2), c(3,0,4,0))
+B = rbind(c(4,3,2,1), c(0,3,0,4), c(1,2,3,4), c(0,1,0,2))
+
+A%*%B
+
+B%*%A
+
+t(A%*%B)
+
+t(B)%*%A
+
+solve(A%*%B)
+
+solve(A)%*%solve(B)
+```
+
+### Pregunta 2
+
+Considera en un vector los números de tu DNI (puedes inventártelos) y llámalo dno. Por ejemplo, si tu DNI es 54201567K, tu vector será:
+
+dni = (5, 4, 2, 0, 1, 5, 6, 7)
+
+Define el vector en `R`. Calcula con R el vector dni al cuadrado, la raíz cuadrada del vector dni y, por último, la suma de todas las cifras del vector dni.
+
+Redacta todos tus resultados y utiliza LaTeX cuando pertoque.
+
+```{r Pregunta 2}
+
+dno = c(1,7,3,7,5,5,7,0)
+
+dno^2
+
+sapply(dno, FUN = sqrt)
+
+sum(dno)
+```
+
+### Pregunta 3
+
+Considera el vector de las letras de tu nombre y apellido. Llámalo name. Por ejemplo,
+
+name = (M, A, R, I, A, S, A, N, T, O, S)
+
+Define dicho vector en `R`. Calcula el subvector que solo contenga tu nombre. Calcula también el subvector que contenga solo tu apellido. Ordénalo alfabéticamente. Crea una matriz con este vector.
+
+Redacta todos tus resultados y utiliza LaTeX cuando pertoque.
+
+```{r Pregunta 3}
+
+name = c('G', 'A', 'B', 'R', 'I', 'E', 'L', 'D', 'A', 'V', 'I', 'L', 'A')
+
+name[1:7]
+
+name[-(1:7)]
+
+sort(name)
+
+matrix(name, nrow = 4)
+
+
+```
+
